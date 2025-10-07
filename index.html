@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CycleTrack — PWA</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+  <main class="app">
+    <header>
+      <h1>CycleTrack</h1>
+      <button id="installBtn" class="secondary hidden">Install</button>
+    </header>
+
+    <section class="stats">
+      <div><strong>Speed</strong><div id="speed">0 km/h</div></div>
+      <div><strong>Distance</strong><div id="distance">0.00 km</div></div>
+      <div><strong>Elapsed</strong><div id="elapsed">00:00:00</div></div>
+      <div><strong>Max Speed</strong><div id="maxspeed">0 km/h</div></div>
+    </section>
+
+    <div id="map"></div>
+
+    <section class="controls">
+      <button id="startBtn" class="primary">Start Ride</button>
+      <button id="stopBtn" class="danger" disabled>Stop Ride</button>
+      <button id="saveBtn" disabled>Save Ride</button>
+      <button id="exportBtn" disabled>Export GPX</button>
+    </section>
+
+    <section id="ridesList" class="rides hidden">
+      <h2>Saved Rides</h2>
+      <ul id="rides"></ul>
+    </section>
+
+    <footer>
+      <small>Works best on mobile with browser geolocation enabled (HTTPS required).</small>
+    </footer>
+  </main>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
